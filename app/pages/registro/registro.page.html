@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+    <div  class="paddingRapp">
+      <img src="/assets/img/Logo_rapp.png" class="espacioTitulo">
+    </div>
+
+    <div class="paddingRapp">
+      <ion-label>Nombres:
+      </ion-label>
+    <ion-item>
+      <ion-input required placeholder="Ingrese su(s) nombre(s)"
+      type="text" 
+      minlength=2></ion-input>
+    </ion-item>
+    <ion-label>Apellidos:
+    </ion-label>
+  <ion-item>
+    <ion-input required placeholder="Ingrese su(s) apellido(s)"
+    type="text" 
+    minlength=2></ion-input>
+  </ion-item>
+  <ion-label>Telefono:
+  </ion-label>
+<ion-item>
+  <ion-input required
+  type="text" placeholder="+56 9 1234 5678"
+  minlength=9></ion-input>
+</ion-item>
+<ion-label>Correo: </ion-label>
+  <ion-item>
+    <ion-input type="email" placeholder="ejemplo@duocuc.cl"
+              name="email" value="" [(ngModel)]= "usuario.email"
+              pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+              required
+              >
+    </ion-input>
+  
+    </ion-item>
+    <ion-label>Contraseña: </ion-label>
+    <ion-item>
+      <ion-input type="password" placeholder="Contraseña"
+                name="password" value="" 
+                required>
+      </ion-input>
+    </ion-item>
+    <ion-label>Confirmar contraseña: </ion-label>
+    <ion-item>
+      <ion-input type="password" placeholder="Reingrese Contraseña"
+                name="password" value="" [(ngModel)]= "usuario.password"
+                required minlength=8>
+      </ion-input>
+    </ion-item>
+    </div>
+
+
+
+
+    <div class="espacioBoton">
+    <ion-button [disabled] ="formulario.invalid"
+            type="submit" expand="block" routerLink="/estudiante" >
+      Entrar
+    </ion-button>
+
+
+    </div>
+
+  </form>
+
+</ion-content>
