@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- Ion buttos para regresar -->
+    <ion-buttons slot="start">
+      <ion-back-button defaulttHref="/" text="Back" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>card</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- ion content es el body-->
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle class="subtitulo">El subtitulo</ion-card-subtitle>
+      <ion-card-title class="titulo">El titulo</ion-card-title>
+    </ion-card-header>
+    <!-- cuerpo de la tarjeta "ion-card-content"-->
+    <ion-card-content>
+      <!-- llamo la clase realizado en el css-->
+      <p class="parrafo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure alias ducimus,
+        reiciendis sunt autem delectus ex maxime inventore maiores ipsum perspiciatis
+        praesentium eaque dolore architecto. Nulla veritatis facilis est atque.
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <!-- Apretar icf para generar una tarjeta card-->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle class="subtitulo">El subtitulo </ion-card-subtitle>
+      <ion-card-title class="titulo">El titulo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="parrafo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolor dicta nemo corrupti,
+        a exercitationem adipisci aperiam quidem sit? Placeat at asperiores illum in repellendus
+        expedita optio quod harum veritatis!
+      </p>
+      <!-- inserto imagen llamandolo de la carpeta y el nombre de la imagen, ion-padding es una almohadilla que deja en la foto-->
+      <img src="assets/pajaro.jpg" class="ion-padding">
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <!-- el  href=# me lleva al home de la app, el slot -->
+    <ion-item href="#">
+      <ion-icon class="wifi" slot="start" name="wifi">
+      </ion-icon>
+      <ion-label>Wifi</ion-label>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-icon class="walk" slot="start" name="walk"></ion-icon>
+      <ion-label>Walk</ion-label>
+    </ion-item>
+    <ion-item href="#">
+      <ion-icon class="warning" slot="start" name="warning"></ion-icon>
+      <ion-label>Warning</ion-label>
+      <!-- shape deja el boton redondeado "round, fill , routerLink me lleva a la pagina donde quiero que redireccione en 
+        este caso /alert"-->
+      <ion-button expand="block" fill="outline" shape="round" routerLink="/alert">
+        View alert
+      </ion-button>
+    </ion-item>
+  </ion-card>
+</ion-content>
